@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#0b1622" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b1622'/%3E%3Cpolygon points='32,10 52,32 32,54 12,32' fill='%232dd4bf' stroke='%2399f6e4' stroke-width='3'/%3E%3C/svg%3E"
+    />
+    <title>ZAAPworld — Aether Sanctuary</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #0b1622;
+        color: #f0f6fc;
+        font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+        touch-action: none;
+        overscroll-behavior: none;
+      }
+
+      #app-canvas {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        touch-action: none;
+        outline: none;
+      }
+
+      #ui-root {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 10;
+        padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom)
+          env(safe-area-inset-left);
+      }
+
+      #loading-screen {
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        background: radial-gradient(circle at 50% 35%, #16324f 0%, #0b1622 65%, #060c14 100%);
+        color: #eef6ff;
+        transition: opacity 0.45s ease, visibility 0.45s ease;
+      }
+
+      #loading-screen.hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .loading-emblem {
+        width: 68px;
+        height: 68px;
+        border-radius: 20px;
+        background: linear-gradient(135deg, rgba(56, 224, 210, 0.28), rgba(45, 134, 255, 0.22));
+        border: 1.5px solid rgba(114, 248, 232, 0.55);
+        box-shadow: 0 0 32px rgba(56, 224, 210, 0.35), inset 0 0 18px rgba(114, 248, 232, 0.25);
+        display: grid;
+        place-items: center;
+        animation: aetherPulse 2.2s ease-in-out infinite;
+      }
+
+      .loading-diamond {
+        width: 28px;
+        height: 28px;
+        transform: rotate(45deg);
+        background: linear-gradient(135deg, #7cfef0 0%, #2dd4bf 55%, #0ea5e9 100%);
+        border-radius: 5px;
+        box-shadow: 0 0 18px rgba(124, 254, 240, 0.8);
+      }
+
+      @keyframes aetherPulse {
+        0%,
+        100% {
+          transform: translateY(0px) scale(1);
+        }
+        50% {
+          transform: translateY(-5px) scale(1.04);
+        }
+      }
+
+      .loading-title {
+        font-size: clamp(1.4rem, 3vw, 2rem);
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        background: linear-gradient(90deg, #ffffff 0%, #99f6e4 55%, #7dd3fc 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        margin: 0;
+      }
+
+      .loading-subtitle {
+        font-size: 0.85rem;
+        color: rgba(203, 225, 245, 0.78);
+        letter-spacing: 0.04em;
+        margin: -8px 0 4px;
+      }
+
+      .loading-bar-track {
+        width: min(320px, 76vw);
+        height: 8px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(148, 213, 255, 0.22);
+        overflow: hidden;
+      }
+
+      #loading-bar-fill {
+        width: 0%;
+        height: 100%;
+        border-radius: 999px;
+        background: linear-gradient(90deg, #2dd4bf 0%, #38bdf8 60%, #a7f3d0 100%);
+        box-shadow: 0 0 12px rgba(45, 212, 191, 0.7);
+        transition: width 0.2s ease-out;
+      }
+
+      #loading-status {
+        font-size: 0.8rem;
+        color: rgba(215, 236, 255, 0.85);
+        min-height: 1.2em;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="app-canvas"></canvas>
+    <div id="ui-root"></div>
+
+    <div id="loading-screen" role="status" aria-live="polite">
+      <div class="loading-emblem" aria-hidden="true">
+        <div class="loading-diamond"></div>
+      </div>
+      <h1 class="loading-title">ZAAPworld</h1>
+      <p class="loading-subtitle">Aether Sanctuary — Open Field Prototype</p>
+      <div class="loading-bar-track">
+        <div id="loading-bar-fill"></div>
+      </div>
+      <div id="loading-status">Initializing 3D world...</div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

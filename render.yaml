@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: zaapworld
+    runtime: node
+    plan: free
+    buildCommand: npm install --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MAX_PARTY_PLAYERS
+        value: "3"
+      # Neon PostgreSQL connection string for Phase 4 durable room/base persistence
+      # (falls back to atomic disk JSON storage when left unset)
+      - key: DATABASE_URL
+        sync: false

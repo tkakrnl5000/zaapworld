@@ -1,0 +1,828 @@
+{
+  "schemaVersion": "1.0",
+  "generator": "Blender 5.3.0",
+  "coordinateSystem": "glTF 2.0 Y-up (+Y up, +Z forward, meters)",
+  "models": {
+    "player_explorer": {
+      "key": "player_explorer",
+      "path": "/models/player_explorer.glb",
+      "description": "Player Explorer (~1.75m stylized adventurer)",
+      "forwardAxis": "+Z (in glTF Y-up)",
+      "groundedAtYZero": true,
+      "triangleCount": 3288,
+      "fileSizeBytes": 170588,
+      "materialCount": 14,
+      "animations": [
+        "Walk",
+        "Run",
+        "Jump",
+        "Idle"
+      ],
+      "boundingBox": {
+        "min": [
+          -0.295,
+          -0.0,
+          -0.346
+        ],
+        "max": [
+          0.295,
+          1.756,
+          0.164
+        ],
+        "size": [
+          0.59,
+          1.756,
+          0.51
+        ]
+      },
+      "nodes": [
+        {
+          "name": "Root",
+          "type": "EMPTY",
+          "children": [
+            {
+              "name": "Hips",
+              "type": "MESH",
+              "children": [
+                {
+                  "name": "Leg_L",
+                  "type": "MESH",
+                  "children": [
+                    {
+                      "name": "Shin_L",
+                      "type": "MESH",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Leg_R",
+                  "type": "MESH",
+                  "children": [
+                    {
+                      "name": "Shin_R",
+                      "type": "MESH",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Torso",
+                  "type": "MESH",
+                  "children": [
+                    {
+                      "name": "Arm_L",
+                      "type": "MESH",
+                      "children": [
+                        {
+                          "name": "ForeArm_L",
+                          "type": "MESH",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Arm_R",
+                      "type": "MESH",
+                      "children": [
+                        {
+                          "name": "ForeArm_R",
+                          "type": "MESH",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Backpack",
+                      "type": "MESH",
+                      "children": []
+                    },
+                    {
+                      "name": "Cape",
+                      "type": "MESH",
+                      "children": []
+                    },
+                    {
+                      "name": "Head",
+                      "type": "MESH",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "tree_canopy": {
+      "key": "tree_canopy",
+      "path": "/models/tree_canopy.glb",
+      "description": "Broadleaf Canopy Tree (~6.5m)",
+      "forwardAxis": "+Z (in glTF Y-up)",
+      "groundedAtYZero": true,
+      "triangleCount": 864,
+      "fileSizeBytes": 49148,
+      "materialCount": 5,
+      "animations": [],
+      "boundingBox": {
+        "min": [
+          -2.3497,
+          0.0,
+          -1.8043
+        ],
+        "max": [
+          2.5067,
+          6.5596,
+          2.3189
+        ],
+        "size": [
+          4.8564,
+          6.5596,
+          4.1232
+        ]
+      },
+      "nodes": [
+        {
+          "name": "CanopyTree_Root",
+          "type": "EMPTY",
+          "children": [
+            {
+              "name": "Canopy",
+              "type": "MESH",
+              "children": []
+            },
+            {
+              "name": "Trunk",
+              "type": "MESH",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "tree_pine": {
+      "key": "tree_pine",
+      "path": "/models/tree_pine.glb",
+      "description": "Highland Pine Tree (~7.5m)",
+      "forwardAxis": "+Z (in glTF Y-up)",
+      "groundedAtYZero": true,
+      "triangleCount": 556,
+      "fileSizeBytes": 28156,
+      "materialCount": 4,
+      "animations": [],
+      "boundingBox": {
+        "min": [
+          -2.1112,
+          0.0,
+          -1.8284
+        ],
+        "max": [
+          2.1112,
+          7.518,
+          1.8284
+        ],
+        "size": [
+          4.2224,
+          7.518,
+          3.6568
+        ]
+      },
+      "nodes": [
+        {
+          "name": "PineTree_Root",
+          "type": "EMPTY",
+          "children": [
+            {
+              "name": "Needles",
+              "type": "MESH",
+              "children": []
+            },
+            {
+              "name": "Trunk",
+              "type": "MESH",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "rock_cluster": {
+      "key": "rock_cluster",
+      "path": "/models/rock_cluster.glb",
+      "description": "Mossy Slate Rock Cluster (~2.8m wide)",
+      "forwardAxis": "+Z (in glTF Y-up)",
+      "groundedAtYZero": true,
+      "triangleCount": 260,
+      "fileSizeBytes": 23052,
+      "materialCount": 3,
+      "animations": [],
+      "boundingBox": {
+        "min": [
+          -1.3684,
+          0.0,
+          -1.0224
+        ],
+        "max": [
+          1.5295,
+          1.6957,
+          1.1076
+        ],
+        "size": [
+          2.8979,
+          1.6957,
+          2.13
+        ]
+      },
+      "nodes": [
+        {
+          "name": "RockCluster_Root",
+          "type": "EMPTY",
+          "children": [
+            {
+              "name": "Boulders",
+              "type": "MESH",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "ancient_ruin": {
+      "key": "ancient_ruin",
+      "path": "/models/ancient_ruin.glb",
+      "description": "Ancient Runic Sanctuary Archway (~5.5m)",
+      "forwardAxis": "+Z (in glTF Y-up)",
+      "groundedAtYZero": true,
+      "triangleCount": 1172,
+      "fileSizeBytes": 74620,
+      "materialCount": 5,
+      "animations": [],
+      "boundingBox": {
+        "min": [
+          -2.3,
+          0.0,
+          -1.15
+        ],
+        "max": [
+          2.3,
+          5.52,
+          1.15
+        ],
+        "size": [
+          4.6,
+          5.52,
+          2.3
+        ]
+      },
+      "nodes": [
+        {
+          "name": "AncientRuin_Root",
+          "type": "EMPTY",
+          "children": [
+            {
+              "name": "Archway",
+              "type": "MESH",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "vital_crystal": {
+      "key": "vital_crystal",
+      "path": "/models/vital_crystal.glb",
+      "description": "Vital Aether Crystal Cluster (~1.6m)",
+      "forwardAxis": "+Z (in glTF Y-up)",
+      "groundedAtYZero": true,
+      "triangleCount": 320,
+      "fileSizeBytes": 22428,
+      "materialCount": 4,
+      "animations": [],
+      "boundingBox": {
+        "min": [
+          -0.52,
+          0.0,
+          -0.52
+        ],
+        "max": [
+          0.52,
+          1.5971,
+          0.52
+        ],
+        "size": [
+          1.04,
+          1.5971,
+          1.04
+        ]
+      },
+      "nodes": [
+        {
+          "name": "VitalCrystal_Root",
+          "type": "EMPTY",
+          "children": [
+            {
+              "name": "CrystalCluster",
+              "type": "MESH",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "bush_flower": {
+      "key": "bush_flower",
+      "path": "/models/bush_flower.glb",
+      "description": "Flowering Meadow Shrub (~1.1m wide)",
+      "forwardAxis": "+Z (in glTF Y-up)",
+      "groundedAtYZero": true,
+      "triangleCount": 560,
+      "fileSizeBytes": 35716,
+      "materialCount": 4,
+      "animations": [],
+      "boundingBox": {
+        "min": [
+          -0.5964,
+          0.0,
+          -0.4785
+        ],
+        "max": [
+          0.5715,
+          0.734,
+          0.4003
+        ],
+        "size": [
+          1.1679,
+          0.734,
+          0.8788
+        ]
+      },
+      "nodes": [
+        {
+          "name": "BushFlower_Root",
+          "type": "EMPTY",
+          "children": [
+            {
+              "name": "Shrub",
+              "type": "MESH",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "monster_moss_hopper": {
+      "key": "monster_moss_hopper",
+      "path": "/models/monster_moss_hopper.glb",
+      "description": "Moss Hopper (~0.95m agile emerald-moss creature)",
+      "forwardAxis": "+Z (in glTF Y-up)",
+      "groundedAtYZero": true,
+      "triangleCount": 3040,
+      "fileSizeBytes": 114356,
+      "materialCount": 8,
+      "animations": [
+        "Walk",
+        "Run",
+        "Attack",
+        "Hit",
+        "Die",
+        "Idle"
+      ],
+      "boundingBox": {
+        "min": [
+          -0.2648,
+          0.0,
+          -0.3774
+        ],
+        "max": [
+          0.2648,
+          1.0099,
+          0.297
+        ],
+        "size": [
+          0.5296,
+          1.0099,
+          0.6744
+        ]
+      },
+      "nodes": [
+        {
+          "name": "MossHopper_Root",
+          "type": "EMPTY",
+          "children": [
+            {
+              "name": "Body",
+              "type": "MESH",
+              "children": [
+                {
+                  "name": "Arm_L",
+                  "type": "MESH",
+                  "children": []
+                },
+                {
+                  "name": "Arm_R",
+                  "type": "MESH",
+                  "children": []
+                },
+                {
+                  "name": "Head",
+                  "type": "MESH",
+                  "children": [
+                    {
+                      "name": "Ear_L",
+                      "type": "MESH",
+                      "children": []
+                    },
+                    {
+                      "name": "Ear_R",
+                      "type": "MESH",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Leg_L",
+                  "type": "MESH",
+                  "children": [
+                    {
+                      "name": "Foot_L",
+                      "type": "MESH",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Leg_R",
+                  "type": "MESH",
+                  "children": [
+                    {
+                      "name": "Foot_R",
+                      "type": "MESH",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Tail",
+                  "type": "MESH",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "monster_aether_wisp": {
+      "key": "monster_aether_wisp",
+      "path": "/models/monster_aether_wisp.glb",
+      "description": "Aether Wisp (~1.25m hovering sky-cyan & lavender mystic spirit)",
+      "forwardAxis": "+Z (in glTF Y-up)",
+      "groundedAtYZero": false,
+      "triangleCount": 2656,
+      "fileSizeBytes": 132528,
+      "materialCount": 7,
+      "animations": [
+        "Walk",
+        "Run",
+        "Attack",
+        "Hit",
+        "Die",
+        "Idle"
+      ],
+      "boundingBox": {
+        "min": [
+          -0.4263,
+          0.2156,
+          -0.4573
+        ],
+        "max": [
+          0.4263,
+          1.235,
+          0.4076
+        ],
+        "size": [
+          0.8526,
+          1.0194,
+          0.8649
+        ]
+      },
+      "nodes": [
+        {
+          "name": "AetherWisp_Root",
+          "type": "EMPTY",
+          "children": [
+            {
+              "name": "Body",
+              "type": "MESH",
+              "children": [
+                {
+                  "name": "Arm_L",
+                  "type": "MESH",
+                  "children": []
+                },
+                {
+                  "name": "Arm_R",
+                  "type": "MESH",
+                  "children": []
+                },
+                {
+                  "name": "Head",
+                  "type": "MESH",
+                  "children": [
+                    {
+                      "name": "EarFin_L",
+                      "type": "MESH",
+                      "children": []
+                    },
+                    {
+                      "name": "EarFin_R",
+                      "type": "MESH",
+                      "children": []
+                    },
+                    {
+                      "name": "Halo",
+                      "type": "MESH",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "RunicRing",
+                  "type": "MESH",
+                  "children": []
+                },
+                {
+                  "name": "Tail",
+                  "type": "MESH",
+                  "children": [
+                    {
+                      "name": "TailTip",
+                      "type": "MESH",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "monster_shale_golem": {
+      "key": "monster_shale_golem",
+      "path": "/models/monster_shale_golem.glb",
+      "description": "Shale Golem (~1.75m warm-terracotta & basalt guardian)",
+      "forwardAxis": "+Z (in glTF Y-up)",
+      "groundedAtYZero": true,
+      "triangleCount": 2180,
+      "fileSizeBytes": 188232,
+      "materialCount": 7,
+      "animations": [
+        "Walk",
+        "Run",
+        "Attack",
+        "Hit",
+        "Die",
+        "Idle"
+      ],
+      "boundingBox": {
+        "min": [
+          -0.7959,
+          0.0,
+          -0.4238
+        ],
+        "max": [
+          0.7959,
+          1.7435,
+          0.345
+        ],
+        "size": [
+          1.5918,
+          1.7435,
+          0.7688
+        ]
+      },
+      "nodes": [
+        {
+          "name": "ShaleGolem_Root",
+          "type": "EMPTY",
+          "children": [
+            {
+              "name": "Pelvis",
+              "type": "MESH",
+              "children": [
+                {
+                  "name": "Leg_L",
+                  "type": "MESH",
+                  "children": []
+                },
+                {
+                  "name": "Leg_R",
+                  "type": "MESH",
+                  "children": []
+                },
+                {
+                  "name": "Torso",
+                  "type": "MESH",
+                  "children": [
+                    {
+                      "name": "Arm_L",
+                      "type": "MESH",
+                      "children": [
+                        {
+                          "name": "ForeArm_L",
+                          "type": "MESH",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Arm_R",
+                      "type": "MESH",
+                      "children": [
+                        {
+                          "name": "ForeArm_R",
+                          "type": "MESH",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Head",
+                      "type": "MESH",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "build_workbench": {
+      "key": "build_workbench",
+      "path": "/models/build_workbench.glb",
+      "description": "Handcrafted Timber Workbench (~1.6m x 1.0m x 1.05m with anvil, vise, tool rack & aether lantern)",
+      "forwardAxis": "+Z (in glTF Y-up)",
+      "groundedAtYZero": true,
+      "triangleCount": 3272,
+      "fileSizeBytes": 185516,
+      "materialCount": 9,
+      "animations": [],
+      "boundingBox": {
+        "min": [
+          -0.8075,
+          0.0,
+          -0.4891
+        ],
+        "max": [
+          0.8075,
+          1.045,
+          0.531
+        ],
+        "size": [
+          1.615,
+          1.045,
+          1.0201
+        ]
+      },
+      "nodes": [
+        {
+          "name": "Workbench_Root",
+          "type": "EMPTY",
+          "children": [
+            {
+              "name": "AetherLantern",
+              "type": "MESH",
+              "children": []
+            },
+            {
+              "name": "TimberFrame",
+              "type": "MESH",
+              "children": []
+            },
+            {
+              "name": "ToolRackAndProps",
+              "type": "MESH",
+              "children": []
+            },
+            {
+              "name": "ViseAndAnvil",
+              "type": "MESH",
+              "children": []
+            },
+            {
+              "name": "Worktop",
+              "type": "MESH",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "build_chest": {
+      "key": "build_chest",
+      "path": "/models/build_chest.glb",
+      "description": "Frontier Storage Chest (~1.1m x 0.75m x 0.85m with barrel-vault lid, iron straps & glowing aether lock)",
+      "forwardAxis": "+Z (in glTF Y-up)",
+      "groundedAtYZero": true,
+      "triangleCount": 2720,
+      "fileSizeBytes": 160032,
+      "materialCount": 6,
+      "animations": [],
+      "boundingBox": {
+        "min": [
+          -0.55,
+          0.0,
+          -0.377
+        ],
+        "max": [
+          0.55,
+          0.863,
+          0.386
+        ],
+        "size": [
+          1.1,
+          0.863,
+          0.763
+        ]
+      },
+      "nodes": [
+        {
+          "name": "Chest_Root",
+          "type": "EMPTY",
+          "children": [
+            {
+              "name": "AetherClaspAndHandles",
+              "type": "MESH",
+              "children": []
+            },
+            {
+              "name": "ChestBody",
+              "type": "MESH",
+              "children": []
+            },
+            {
+              "name": "ChestLid",
+              "type": "MESH",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "build_bed": {
+      "key": "build_bed",
+      "path": "/models/build_bed.glb",
+      "description": "Cozy Frontier Straw Bed (~1.2m x 2.1m x 0.72m with curved headboard, golden straw & teal/coral quilt)",
+      "forwardAxis": "+Z (in glTF Y-up)",
+      "groundedAtYZero": true,
+      "triangleCount": 2296,
+      "fileSizeBytes": 110392,
+      "materialCount": 8,
+      "animations": [],
+      "boundingBox": {
+        "min": [
+          -0.598,
+          0.0,
+          -1.043
+        ],
+        "max": [
+          0.598,
+          0.72,
+          1.043
+        ],
+        "size": [
+          1.196,
+          0.72,
+          2.086
+        ]
+      },
+      "nodes": [
+        {
+          "name": "Bed_Root",
+          "type": "EMPTY",
+          "children": [
+            {
+              "name": "BedFrame",
+              "type": "MESH",
+              "children": []
+            },
+            {
+              "name": "BlanketAndPillow",
+              "type": "MESH",
+              "children": []
+            },
+            {
+              "name": "StrawMattress",
+              "type": "MESH",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
